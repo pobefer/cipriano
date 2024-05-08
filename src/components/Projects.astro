@@ -1,46 +1,11 @@
 ---
-import GitHub from "./Icons/GitHub.astro"
-import Python from "./Icons/Python.astro"
-import Chatbot from "./Icons/Chatbot.astro"
-import NextJS from "./Icons/NextJS.astro"
-import Tailwind from "./Icons/Tailwind.astro"
-import AstroSVG from "./Icons/AstroSVG.astro"
-import Link from "./Icons/Link.astro"
-import LinkButton from "./LinkButton.astro"
 
-const TAGS = {
-  PYTHON: {
-    name: "Python",
-    class: "bg-black text-white",
-    icon: Python,
-  },
-  CHATBOT: {
-    name: "Chatbot",
-    class: "bg-[#003159] text-white",
-    icon: Chatbot,
-  },
-  NEXTJS: {
-    name: "NextJS",
-    class: "bg-[#003159] text-white",
-    icon: NextJS,
-  },
-  TAILWIND: {
-    name: "Tailwind css",
-    class: "bg-[#003159] text-white",
-    icon: Tailwind,
-  },
-  ASTRO: {
-    name: "Astro",
-    class: "bg-[#003159] text-white",
-    icon: AstroSVG,
-  },
-}
+
 const PROJECTS = [
 {
     title: "Radiofrecuencia de nervios y ganglios",
     description:
       ["Plexo simpatico lumbar", "Trigemino-Ganglio de Gasser", "Ganglio Estrellado", "Ganglio Esfenopalatino"],
-    link: "#",
     image: "/cipriano/P1.webp",
   },
   {
@@ -52,8 +17,6 @@ const PROJECTS = [
 "Estimulación eléctrica percutánea de nervios periféricos (PENS)",
 "Implante de cateteres tunelizados",
 "Implante de reservorios subcutáneos"],
-    link: "#",
-    github: "#",
     image: "/cipriano/P2.webp",
   },
   {
@@ -66,7 +29,6 @@ const PROJECTS = [
 "OZONOTERAPIA Hernias discales: Discolisis y Tratamiento paravertebral",
 "EPIDURAL Tratamiento transforaminal y translaminar",
 "Liberación de fibrosis y adhesiones en el espacio epidural. Epidurolisis, epiduroscopia"],
-    link: "#",
     image: "/cipriano/P3.webp",
   },
   {
@@ -79,7 +41,6 @@ const PROJECTS = [
 "OZONOTERAPIA Hernias discales: Discolisis y Tratamiento paravertebral",
 "EPIDURAL Tratamiento transforaminal y translaminar",
 "Liberación de fibrosis y adhesiones en el espacio epidural. Epidurolisis, epiduroscopia"],
-    link: "#",
     image: "/cipriano/P4.webp",
   },
   {
@@ -89,7 +50,6 @@ const PROJECTS = [
 "Inyección punto gatillo con Toxina botulínica",
 "Inyección intraarticular: Cadera, Rodilla, Hombro",
 "Radiofrecuencia articular"],
-    link: "#",
     image: "/cipriano/P5.webp",
   },
 ]
@@ -97,7 +57,7 @@ const PROJECTS = [
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, link, github }) => (
+    PROJECTS.map(({ image, title, description }) => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -112,7 +72,7 @@ const PROJECTS = [
           <div class="flex flex-col flex-wrap mt-2">
             {description.map((desc, index) => (
               <div>
-              <p key={index} class="mt-2 text-gray-700 dark:text-gray-400">• {desc}</p>
+              <p class="mt-2 text-gray-700 dark:text-gray-400">• {desc}</p>
               </div>
             ))}
           </div>
