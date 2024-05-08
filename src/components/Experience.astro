@@ -1,0 +1,40 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Currently",
+    title: "Fundacion Asturias Dolor",
+    company: "Asturias Dolor S.L.",
+    description: "He fundado junto a mi mujer la Fundación Asturias Dolor, una organización que tiene como objetivo mejorar la calidad de vida de los pacientes con dolor crónico. A través de la investigación y la innovación, trabajamos para desarrollar nuevas terapias y tratamientos que permitan a los pacientes vivir una vida plena y sin dolor. Nuestro enfoque en la atención al paciente y la colaboración con otros profesionales de la salud nos ha permitido marcar la diferencia en la vida de muchas personas."
+  },
+  {
+    date: "Currently",
+    title: "Conferencias y Talleres",
+    company: "",
+    description: "A lo largo de mi carrera, he tenido la oportunidad de participar en numerosas conferencias y talleres sobre el tratamiento del dolor crónico. Estas experiencias me han permitido compartir mis conocimientos y experiencias con otros profesionales de la salud, así como aprender de sus experiencias y enfoques. Mi pasión por la innovación y la mejora de la calidad de vida de los pacientes me ha llevado a colaborar con otros profesionales de la salud en la búsqueda de soluciones innovadoras para el tratamiento del dolor."
+  },
+  {
+    date: "October 1999",
+    title: "Especialista en Anestesia y Reanimación",
+    company: "Hospital de Burgos",
+    description: "Especialista en Anestesia y Reanimación por el Hospital de Burgos, he desarrollado mi carrera profesional en el ámbito de la salud, con una especialización en el tratamiento del dolor. A lo largo de los años, he adquirido una amplia experiencia en el diagnóstico y tratamiento de enfermedades crónicas, lo que me ha permitido desempeñar un papel activo en la mejora de la calidad de vida de los pacientes. Mi enfoque en la atención al paciente y la innovación en el tratamiento del dolor ha sido fundamental para mi desarrollo profesional."
+  },
+  {
+    date: "Junio 1990",
+    title: "Lincenciado en Medicina",
+    company: "Universidad de Oviedo",
+    description: "Licenciado en Medicina por la Universidad de Oviedo, he desarrollado mi carrera profesional en el ámbito de la salud, con una especialización en el tratamiento del dolor. A lo largo de los años, he adquirido una amplia experiencia en el diagnóstico y tratamiento de enfermedades crónicas, lo que me ha permitido desempeñar un papel activo en la mejora de la calidad de vida de los pacientes. Mi enfoque en la atención al paciente y la innovación en el tratamiento del dolor ha sido fundamental para mi desarrollo profesional."
+  },
+]
+
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

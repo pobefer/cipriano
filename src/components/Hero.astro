@@ -1,0 +1,48 @@
+---
+const personalImageAlt = "Fernando de la Torre Cueva"
+import Badge from "./Badge.astro"
+import LinkedInIcon from "./Icons/LinkedIn.astro"
+import MailIcon from "./Icons/Mail.astro"
+import SocialPill from "./SocialPill.astro"
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg size-36"
+      src="/cipriano/portada.webp"
+      alt={personalImageAlt}
+    />
+    <a
+      href="mailto:cipriano.anestesia@gmail.com"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Anestesista y Experto en Dolor</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+  >
+    Hola, Soy Cipriano Fernandez Fernandez
+  </h1>
+  <p
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+  >
+  +40 anios de experiencia en la anestesia y el tratamiento del dolor. <strong
+  >Coofundador de la unidad de dolor Asturias Dolor </strong
+> Experto en tratamiento de dolor cronico.
+<strong><br/>Asturias Dolor.</strong>
+  </p>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="mailto:cipriano.anestesia@gmail.com">
+      <MailIcon class="size-4" />
+      Contactame
+    </SocialPill>
+    <SocialPill href="#">
+      <LinkedInIcon class="size-4" />
+      LinkedIn
+    </SocialPill>
+  </nav>
+</div>
